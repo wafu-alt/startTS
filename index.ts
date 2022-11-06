@@ -1,9 +1,8 @@
 console.log("TS파일 실행");
 
 const todoInputbox = document.getElementsByTagName("form")[0];
-
+console.log(document.getElementsByTagName("form"));
 const todoList = document.getElementById("todoList");
-const buttons = document.getElementsByTagName("button")[0];
 
 // 인풋박스에 텍스트 엔터 시 리스트 추가
 const handlesubmitAdd = (event) => {
@@ -17,10 +16,11 @@ const handlesubmitAdd = (event) => {
   // 삭제 버튼을 추가
   const createButton = document.createElement("button");
   createButton.textContent = "X";
-  createButton.addEventListener("click", handleclickDelete);
   createLi.appendChild(createButton);
+  createButton.addEventListener("click", handleclickDelete);
 
-  window.document.querySelectorAll("input")[0].value = "";
+  // 인풋 텍스창 비우기
+  document.querySelectorAll("input")[0].value = "";
 };
 
 // 버튼 클릭 시 삭제
