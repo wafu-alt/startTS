@@ -28,4 +28,5 @@ const handleclickDelete = (event) => {
   event.target.parentElement.remove();
 };
 
+// Form 내부에서 엔터 칠 시 이벤트 등록
 todoInputbox.addEventListener("submit", handlesubmitAdd);
