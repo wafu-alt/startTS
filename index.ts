@@ -10,6 +10,7 @@ const handlesubmitAdd = (event) => {
   // 텍스트를 리스트에 추가
   let inputValue = document.querySelectorAll("input")[0].value;
   const createLi = document.createElement("li");
+  createLi.id = "newId";
   createLi.textContent = `${inputValue} `;
   todoList.appendChild(createLi);
 
@@ -31,11 +32,7 @@ const handleclickDelete = (event) => {
 // Form 내부에서 엔터 칠 시 이벤트 등록
 todoInputbox.addEventListener("submit", handlesubmitAdd);
 
-sessionStorage.setItem("session", "session value, value2");
 localStorage.setItem("local", "local value, value2");
-
-sessionStorage.getItem("session");
-console.log();
 
 // const setCookie = function (name, value, day) {
 //   let date = new Date();
